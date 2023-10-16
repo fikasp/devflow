@@ -1,0 +1,12 @@
+{
+	"extends": [
+		"next/core-web-vitals",
+		"standard",
+		"prettier",
+		"plugin:tailwindcss/recommended",
+		"eslint:recommended"
+	], 
+  "globals": {
+    "React": "writable"
+  }
+}
