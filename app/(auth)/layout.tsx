@@ -1,8 +1,4 @@
-interface LayoutProps {
-	children: React.ReactNode
-}
-
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children }: { children: React.ReactNode }) {
 	return (
 		<>
 			<div className="flex-center bg-black text-white">Auth</div>
@@ -10,4 +6,3 @@ export default function Layout({ children }: LayoutProps) {
 		</>
 	)
 }
-
