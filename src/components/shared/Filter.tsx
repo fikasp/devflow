@@ -36,7 +36,11 @@ export default function Filter({
 				<SelectContent className="background-light800_dark300 text-dark500_light700">
 					<SelectGroup>
 						{filters.map((item) => (
-							<SelectItem key={item.value} value={item.value}>
+							<SelectItem
+								className="hover:bg-gray-200 dark:hover:bg-gray-800"
+								key={item.value}
+								value={item.value}
+							>
 								{item.name}
 							</SelectItem>
 						))}
