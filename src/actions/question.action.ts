@@ -2,7 +2,7 @@
 
 import Question from '@/database/question.model'
 import Tag from '@/database/tag.model'
-import { connectToDatabase } from '../mongoose'
+import { connectToDatabase } from '../lib/mongoose'
 import { CreateQuestionParams, GetQuestionsParams } from './shared.types'
 import User from '@/database/user.model'
 import { revalidatePath } from 'next/cache'
