@@ -17,9 +17,9 @@ import { Input } from '@/components/ui/input'
 import { Button } from '../ui/button'
 import { QuestionsSchema } from '@/lib/validations'
 import { Badge } from '../ui/badge'
-import Image from 'next/image'
 import { createQuestion } from '@/actions/question.action'
 import { useRouter, usePathname } from 'next/navigation'
+import Image from 'next/image'
 
 const type: any = 'create'
 
