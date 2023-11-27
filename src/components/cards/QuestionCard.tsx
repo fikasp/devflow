@@ -58,10 +58,10 @@ export default function QuestionCard({
 			<div className="flex-between mt-6 w-full flex-wrap gap-3">
 				<Metric
 					alt="user"
-					imgUrl={author.picture}
-					value={author.name}
+					imgUrl={author?.picture}
+					value={author?.name}
 					title={` - asked ${getTimestamp(createdAt)}`}
-					href={`/profile/${author._id}`}
+					href={`/profile/${author?._id}`}
 					isAuthor
 					textStyles="body-medium text-dark400_light700"
 				/>
