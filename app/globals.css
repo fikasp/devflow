@@ -163,3 +163,7 @@ code {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.grid-fit-240 {
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
