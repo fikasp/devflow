@@ -9,9 +9,18 @@ import { Editor } from '@tinymce/tinymce-react'
 import { useTheme } from '@/context/ThemeProvider'
 import { Form, FormControl, FormField, FormItem, FormMessage } from '../ui/form'
 import { Button } from '../ui/button'
+import { createAnswer } from '@/actions/answer.action'
+import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 
-export default function Answer() {
+interface Props {
+	question: string
+	questionId: string
+	authorId: string
+}
+
+export default function Answer({ question, questionId, authorId }: Props) {
+	const pathname = usePathname()
 	// eslint-disable-next-line no-unused-vars
 	const [isSubmitting, setIsSubmitting] = useState(false)
 	const { mode } = useTheme()
@@ -23,7 +32,30 @@ export default function Answer() {
 		},
 	})
 
-	const handleCreateAnswer = () => {}
+	const handleCreateAnswer = async (values: z.infer<typeof AnswerSchema>) => {
+		setIsSubmitting(true)
+
+		try {
+			await createAnswer({
+				content: values.answer,
+				author: JSON.parse(authorId),
+				question: JSON.parse(questionId),
+				path: pathname,
+			})
+
+			form.reset()
+
+			if (editorRef.current) {
+				const editor = editorRef.current as any
+
+				editor.setContent('')
+			}
+		} catch (error) {
+			console.log(error)
+		} finally {
+			setIsSubmitting(false)
+		}
+	}
 
 	return (
 		<div>
@@ -104,7 +136,7 @@ export default function Answer() {
 
 					<div className="flex justify-end">
 						<Button
-							type="button"
+							type="submit"
 							className="primary-gradient w-fit text-white"
 							disabled={isSubmitting}
 						>
