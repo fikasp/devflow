@@ -1,4 +1,5 @@
 import './globals.css'
+import '@/styles/prism.css'
 import type { Metadata } from 'next'
 import { ClerkProvider } from '@clerk/nextjs'
 // eslint-disable-next-line camelcase
@@ -41,9 +42,7 @@ export default function RootLayout({
 						},
 					}}
 				>
-					<ThemeProvider>
-						{children}
-					</ThemeProvider>
+					<ThemeProvider>{children}</ThemeProvider>
 				</ClerkProvider>
 			</body>
 		</html>
