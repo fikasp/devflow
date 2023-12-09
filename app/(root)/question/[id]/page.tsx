@@ -12,7 +12,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export default async function Page({ params, searchParams }) {
+export default async function Page({ params, searchParams }: any) {
 	const { userId: clerkId } = auth()
 
 	let mongoUser
