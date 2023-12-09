@@ -20,9 +20,11 @@ interface QuestionProps {
 	views: number
 	answers: Array<object>
 	createdAt: Date
+	clerkId?: string
 }
 
 export default function QuestionCard({
+	clerkId,
 	_id,
 	title,
 	tags,

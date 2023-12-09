@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Filter from '@/components/shared/Filter'
 import NoResult from '@/components/shared/NoResult'
-import LocalSearchbar from '@/components/shared/search/LocalSearchbar'
+import LocalSearchbar from '@/components/search/LocalSearchbar'
 import { getAllTags } from '@/actions/tag.actions'
 import { UserFilters } from '@/constants/filters'
 

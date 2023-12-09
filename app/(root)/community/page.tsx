@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Filter from '@/components/shared/Filter'
 import UserCard from '@/components/cards/UserCard'
-import LocalSearchbar from '@/components/shared/search/LocalSearchbar'
+import LocalSearchbar from '@/components/search/LocalSearchbar'
 import { UserFilters } from '@/constants/filters'
 import { getAllUsers } from '@/actions/user.action'
 
