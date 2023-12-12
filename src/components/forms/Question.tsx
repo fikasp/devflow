@@ -1,17 +1,9 @@
 'use client'
-import * as z from 'zod'
-import Image from 'next/image'
 import React, { useRef, useState } from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 import { zodResolver } from '@hookform/resolvers/zod'
+import * as z from 'zod'
 import { useForm } from 'react-hook-form'
-import { Input } from '@/components/ui/input'
-import { Button } from '../ui/button'
-import { QuestionsSchema } from '@/lib/validations'
-import { Badge } from '../ui/badge'
-import { createQuestion, editQuestion } from '@/actions/question.action'
-import { useRouter, usePathname } from 'next/navigation'
-import { useTheme } from '@/context/ThemeProvider'
 import {
 	Form,
 	FormControl,
@@ -21,6 +13,14 @@ import {
 	FormLabel,
 	FormMessage,
 } from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Button } from '../ui/button'
+import { QuestionsSchema } from '@/lib/validations'
+import { Badge } from '../ui/badge'
+import Image from 'next/image'
+import { createQuestion, editQuestion } from '@/actions/question.action'
+import { useRouter, usePathname } from 'next/navigation'
+import { useTheme } from '@/context/ThemeProvider'
 
 interface Props {
 	type?: string
@@ -39,16 +39,17 @@ export default function Question({
 	const router = useRouter()
 	const pathname = usePathname()
 
-	const parsedQuestionDetails = JSON.parse(questionDetails || '')
+	const parsedQuestionDetails =
+		questionDetails && JSON.parse(questionDetails || '')
 
-	const groupedTags = parsedQuestionDetails.tags.map((tag: any) => tag.name)
+	const groupedTags = parsedQuestionDetails?.tags.map((tag: any) => tag.name)
 
 	// 1. Define your form.
 	const form = useForm<z.infer<typeof QuestionsSchema>>({
 		resolver: zodResolver(QuestionsSchema),
 		defaultValues: {
-			title: parsedQuestionDetails.title || '',
-			explanation: parsedQuestionDetails.content || '',
+			title: parsedQuestionDetails?.title || '',
+			explanation: parsedQuestionDetails?.content || '',
 			tags: groupedTags || [],
 		},
 	})
@@ -56,6 +57,7 @@ export default function Question({
 	// 2. Define a submit handler.
 	async function onSubmit(values: z.infer<typeof QuestionsSchema>) {
 		setIsSubmitting(true)
+		console.log('work?')
 
 		try {
 			if (type === 'Edit') {
@@ -165,7 +167,7 @@ export default function Question({
 									}}
 									onBlur={field.onBlur}
 									onEditorChange={(content) => field.onChange(content)}
-									initialValue={parsedQuestionDetails.content || ''}
+									initialValue={parsedQuestionDetails?.content || ''}
 									init={{
 										height: 350,
 										menubar: false,
