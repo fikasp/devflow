@@ -42,7 +42,7 @@ export default function Question({
 
 	const parsedQuestionDetails = JSON.parse(questionDetails || '')
 
-	const groupedTags = parsedQuestionDetails.tags.map((tag) => tag.name)
+	const groupedTags = parsedQuestionDetails.tags.map((tag: { name: any }) => tag.name)
 
 	// 1. Define your form.
 	const form = useForm<z.infer<typeof QuestionsSchema>>({
