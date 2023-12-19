@@ -13,7 +13,7 @@ interface Props {
 	userId: string
 	totalAnswers: number
 	page?: number
-	filter?: number
+	filter?: string
 }
 
 export default async function AllAnswers({
@@ -25,6 +25,8 @@ export default async function AllAnswers({
 }: Props) {
 	const result = await getAnswers({
 		questionId,
+		page: page ? +page : 1,
+		sortBy: filter,
 	})
 
 	return (

@@ -4,6 +4,7 @@ import HomeFilters from '@/components/layout/HomeFilters'
 import Filter from '@/components/shared/Filter'
 import NoResult from '@/components/shared/NoResult'
 import LocalSearchbar from '@/components/search/LocalSearchbar'
+import Pagination from '@/components/shared/Pagination'
 import { Button } from '@/components/ui/button'
 import { HomePageFilters } from '@/constants/filters'
 import { getQuestions } from '@/actions/question.action'
@@ -12,6 +13,7 @@ import { SearchParamsProps } from '@/types'
 export default async function Home({ searchParams }: SearchParamsProps) {
 	const result = await getQuestions({
 		searchQuery: searchParams.q,
+		filter: searchParams.filter,
 	})
 
 	return (
