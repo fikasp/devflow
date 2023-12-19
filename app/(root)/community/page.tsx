@@ -4,9 +4,12 @@ import UserCard from '@/components/cards/UserCard'
 import LocalSearchbar from '@/components/search/LocalSearchbar'
 import { UserFilters } from '@/constants/filters'
 import { getAllUsers } from '@/actions/user.action'
+import { SearchParamsProps } from '@/types'
 
-export default async function Page() {
-	const result = await getAllUsers({})
+export default async function Page({ searchParams }: SearchParamsProps) {
+	const result = await getAllUsers({
+		searchQuery: searchParams.q,
+	})
 
 	return (
 		<>

@@ -4,9 +4,12 @@ import NoResult from '@/components/shared/NoResult'
 import LocalSearchbar from '@/components/search/LocalSearchbar'
 import { getAllTags } from '@/actions/tag.actions'
 import { UserFilters } from '@/constants/filters'
+import { SearchParamsProps } from '@/types'
 
-export default async function Page() {
-	const result = await getAllTags({})
+export default async function Page({ searchParams }: SearchParamsProps) {
+	const result = await getAllTags({
+		searchQuery: searchParams.q,
+	})
 
 	return (
 		<>
