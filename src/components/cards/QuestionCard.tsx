@@ -71,7 +71,7 @@ export default function QuestionCard({
 					imgUrl={author?.picture}
 					value={author?.name}
 					title={` - asked ${getTimestamp(createdAt)}`}
-					href={`/profile/${author?._id}`}
+					href={`/profile/${author?.clerkId}`}
 					isAuthor
 					textStyles="body-medium text-dark400_light700"
 				/>
