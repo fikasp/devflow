@@ -1,3 +1,4 @@
+import Pagination from './Pagination'
 import AnswerCard from '../cards/AnswerCard'
 
 import { getUserAnswers } from '@/actions/user.action'
@@ -15,10 +16,8 @@ export default async function AnswersTab({
 }: Props) {
 	const result = await getUserAnswers({
 		userId,
-		page: 1,
+		page: searchParams.page ? +searchParams.page : 1,
 	})
-
-	console.log(result.answers)
 
 	return (
 		<>
@@ -33,6 +32,13 @@ export default async function AnswersTab({
 					createdAt={item.createdAt}
 				/>
 			))}
+
+			<div className="mt-10">
+				<Pagination
+					pageNumber={searchParams?.page ? +searchParams.page : 1}
+					isNext={result.isNextAnswer}
+				/>
+			</div>
 		</>
 	)
 }

@@ -1,12 +1,13 @@
 import React from 'react'
-import Filter from './Filter'
-import { AnswerFilters } from '@/constants/filters'
-import { getAnswers } from '@/actions/answer.action'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getTimestamp } from '@/lib/utils'
-import ParseHTML from './ParseHTML'
 import Votes from './Votes'
+import Filter from './Filter'
+import ParseHTML from './ParseHTML'
+import Pagination from './Pagination'
+import { AnswerFilters } from '@/constants/filters'
+import { getAnswers } from '@/actions/answer.action'
+import { getTimestamp } from '@/lib/utils'
 
 interface Props {
 	questionId: string
@@ -79,6 +80,13 @@ export default async function AllAnswers({
 						<ParseHTML data={answer.content} />
 					</article>
 				))}
+			</div>
+
+			<div className="mt-10 w-full">
+				<Pagination
+					pageNumber={page ? +page : 1}
+					isNext={result.isNextAnswer}
+				/>
 			</div>
 		</div>
 	)
