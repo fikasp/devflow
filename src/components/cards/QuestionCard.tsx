@@ -3,7 +3,7 @@ import React from 'react'
 import RenderTag from '../shared/RenderTag'
 import Metric from '../shared/Metric'
 import EditDeleteAction from '../shared/EditDeleteAction'
-import { formatAndDivideNumber, getTimestamp } from '@/lib/utils'
+import { formatAndDivideNumber, getTimestamp } from '@/utils/utils'
 import { SignedIn } from '@clerk/nextjs'
 
 interface QuestionProps {

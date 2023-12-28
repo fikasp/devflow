@@ -3,7 +3,7 @@
 import Question from '@/database/question.model'
 import Interaction from '@/database/interaction.model'
 import { ViewQuestionParams } from './shared.types'
-import { connectToDatabase } from '@/lib/mongoose'
+import { connectToDatabase } from '@/utils/mongoose'
 
 export async function viewQuestion(params: ViewQuestionParams) {
 	try {

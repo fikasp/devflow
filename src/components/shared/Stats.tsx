@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { formatAndDivideNumber } from '@/lib/utils'
+import { formatAndDivideNumber } from '@/utils/utils'
 
 interface StatsCardProps {
 	imgUrl: string

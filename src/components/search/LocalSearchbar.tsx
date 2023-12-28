@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { formUrlQuery, removeKeysFromQuery } from '@/lib/utils'
+import { formUrlQuery, removeKeysFromQuery } from '@/utils/utils'
 import { Input } from '@/components/ui/input'
 
 interface CustomInputProps {

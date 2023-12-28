@@ -6,7 +6,7 @@ import Question from '@/database/question.model'
 import Answer from '@/database/answer.model'
 import { FilterQuery } from 'mongoose'
 import { revalidatePath } from 'next/cache'
-import { connectToDatabase } from '@/lib/mongoose'
+import { connectToDatabase } from '@/utils/mongoose'
 import {
 	CreateUserParams,
 	DeleteUserParams,

@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '../ui/button'
-import { formUrlQuery } from '@/lib/utils'
+import { formUrlQuery } from '@/utils/utils'
 import { useRouter, useSearchParams } from 'next/navigation'
 
 interface Props {

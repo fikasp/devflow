@@ -7,7 +7,7 @@ import ParseHTML from './ParseHTML'
 import Pagination from './Pagination'
 import { AnswerFilters } from '@/constants/filters'
 import { getAnswers } from '@/actions/answer.action'
-import { getTimestamp } from '@/lib/utils'
+import { getTimestamp } from '@/utils/utils'
 
 interface Props {
 	questionId: string

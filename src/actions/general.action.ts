@@ -1,11 +1,11 @@
 'use server'
 
-import Question from '@/database/question.model'
-import { connectToDatabase } from '@/lib/mongoose'
-import { SearchParams } from './shared.types'
-import User from '@/database/user.model'
 import Answer from '@/database/answer.model'
+import Question from '@/database/question.model'
+import User from '@/database/user.model'
 import Tag from '@/database/tag.model'
+import { connectToDatabase } from '@/utils/mongoose'
+import { SearchParams } from './shared.types'
 
 const SearchableTypes = ['question', 'answer', 'user', 'tag']
 

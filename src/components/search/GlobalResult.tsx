@@ -5,9 +5,9 @@ import Image from 'next/image'
 import GlobalFilters from './GlobalFilters'
 import React, { useEffect, useState } from 'react'
 
+import { useSearchParams } from 'next/navigation'
 import { globalSearch } from '@/actions/general.action'
 import { ReloadIcon } from '@radix-ui/react-icons'
-import { useSearchParams } from 'next/navigation'
 
 export default function GlobalResult() {
 	const searchParams = useSearchParams()

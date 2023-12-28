@@ -5,7 +5,7 @@ import { downvoteAnswer, upvoteAnswer } from '@/actions/answer.action'
 import { viewQuestion } from '@/actions/interaction.action'
 import { downvoteQuestion, upvoteQuestion } from '@/actions/question.action'
 import { toggleSaveQuestion } from '@/actions/user.action'
-import { formatAndDivideNumber } from '@/lib/utils'
+import { formatAndDivideNumber } from '@/utils/utils'
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 

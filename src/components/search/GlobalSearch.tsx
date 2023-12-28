@@ -5,7 +5,7 @@ import GlobalResult from './GlobalResult'
 import React, { useEffect, useRef, useState } from 'react'
 import { Input } from '@/components/ui/input'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { formUrlQuery, removeKeysFromQuery } from '@/lib/utils'
+import { formUrlQuery, removeKeysFromQuery } from '@/utils/utils'
 
 export default function GlobalSearch() {
 	const router = useRouter()

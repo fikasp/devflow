@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { useForm } from 'react-hook-form'
 import { Textarea } from '../ui/textarea'
 import { useState } from 'react'
-import { ProfileSchema } from '@/lib/validations'
+import { ProfileSchema } from '@/utils/validations'
 import { usePathname, useRouter } from 'next/navigation'
 import { updateUser } from '@/actions/user.action'
 import {

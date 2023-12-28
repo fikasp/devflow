@@ -3,7 +3,7 @@
 import Answer from '@/database/answer.model'
 import Question from '@/database/question.model'
 import Interaction from '@/database/interaction.model'
-import { connectToDatabase } from '@/lib/mongoose'
+import { connectToDatabase } from '@/utils/mongoose'
 import { revalidatePath } from 'next/cache'
 import {
 	AnswerVoteParams,

@@ -6,7 +6,7 @@ import User from '@/database/user.model'
 import Answer from '@/database/answer.model'
 import Interaction from '@/database/interaction.model'
 import { FilterQuery } from 'mongoose'
-import { connectToDatabase } from '../lib/mongoose'
+import { connectToDatabase } from '@/utils/mongoose'
 import { revalidatePath } from 'next/cache'
 import {
 	CreateQuestionParams,

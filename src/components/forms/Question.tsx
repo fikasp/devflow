@@ -15,7 +15,7 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Button } from '../ui/button'
-import { QuestionsSchema } from '@/lib/validations'
+import { QuestionsSchema } from '@/utils/validations'
 import { Badge } from '../ui/badge'
 import Image from 'next/image'
 import { createQuestion, editQuestion } from '@/actions/question.action'

@@ -11,7 +11,7 @@ import { getUserInfo } from '@/actions/user.action'
 import { URLProps } from '@/types'
 import { SignedIn, auth } from '@clerk/nextjs'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { getJoinedDate } from '@/lib/utils'
+import { getJoinedDate } from '@/utils/utils'
 
 export default async function Page({ params, searchParams }: URLProps) {
 	const { userId: clerkId } = auth()

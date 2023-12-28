@@ -4,7 +4,7 @@ import User from '@/database/user.model'
 import Tag, { ITag } from '@/database/tag.model'
 import Question from '@/database/question.model'
 import { FilterQuery } from 'mongoose'
-import { connectToDatabase } from '@/lib/mongoose'
+import { connectToDatabase } from '@/utils/mongoose'
 import {
 	GetAllTagsParams,
 	GetQuestionsByTagIdParams,
