@@ -19,8 +19,8 @@ export default function Pagination({ pageNumber, isNext }: Props) {
 
 		const newUrl = formUrlQuery({
 			params: searchParams.toString(),
-			key: 'page',
 			value: nextPageNumber.toString(),
+			key: 'page',
 		})
 
 		router.push(newUrl)
