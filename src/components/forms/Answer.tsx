@@ -73,6 +73,7 @@ export default function Answer({ question, questionId, authorId }: Props) {
 			)
 
 			const aiAnswer = await response.json()
+			console.log(aiAnswer)
 
 			// Convert plain text to HTML format
 
