@@ -2,6 +2,11 @@ import Profile from '@/components/forms/Profile'
 import { getUserById } from '@/actions/user.action'
 import { ParamsProps } from '@/types'
 import { auth } from '@clerk/nextjs'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+	title: 'Edit profile | Dev Overflow',
+}
 
 export default async function Page({ params }: ParamsProps) {
 	const { userId } = auth()

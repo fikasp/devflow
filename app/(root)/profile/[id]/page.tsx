@@ -12,6 +12,11 @@ import { URLProps } from '@/types'
 import { SignedIn, auth } from '@clerk/nextjs'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { getJoinedDate } from '@/utils/utils'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+	title: 'Profile | Dev Overflow',
+}
 
 export default async function Page({ params, searchParams }: URLProps) {
 	const { userId: clerkId } = auth()

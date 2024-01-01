@@ -7,6 +7,12 @@ import { UserFilters } from '@/constants/filters'
 import { getAllUsers } from '@/actions/user.action'
 import { SearchParamsProps } from '@/types'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+	title: 'Community | Dev Overflow',
+}
+
 export default async function Page({ searchParams }: SearchParamsProps) {
 	const result = await getAllUsers({
 		searchQuery: searchParams.q,

@@ -1,6 +1,7 @@
 import Navbar from '@/components/layout/Navbar'
 import LeftSidebar from '@/components/layout/LeftSidebar'
 import RightSidebar from '@/components/layout/RightSidebar'
+import { Toaster } from '@/components/ui/toaster'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 	return (
@@ -15,6 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 				<RightSidebar />
 			</div>
+			<Toaster />
 		</main>
 	)
 }

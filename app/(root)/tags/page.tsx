@@ -6,6 +6,11 @@ import Pagination from '@/components/shared/Pagination'
 import { getAllTags } from '@/actions/tag.actions'
 import { TagFilters } from '@/constants/filters'
 import { SearchParamsProps } from '@/types'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+	title: 'Tags | Dev Overflow',
+}
 
 export default async function Page({ searchParams }: SearchParamsProps) {
 	const result = await getAllTags({
