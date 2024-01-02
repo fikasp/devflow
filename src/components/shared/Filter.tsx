@@ -53,11 +53,11 @@ export default function Filter({
 						<SelectValue placeholder="Select a Filter" />
 					</div>
 				</SelectTrigger>
-				<SelectContent className="background-light800_dark300 text-dark500_light700">
+				<SelectContent className="text-dark500_light700 small-regular border-none bg-light-900 dark:bg-dark-300">
 					<SelectGroup>
 						{filters.map((item) => (
 							<SelectItem
-								className="hover:bg-gray-200 dark:hover:bg-gray-800"
+								className="cursor-pointer focus:bg-light-800 dark:focus:bg-dark-400"
 								key={item.value}
 								value={item.value}
 							>

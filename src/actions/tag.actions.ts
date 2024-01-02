@@ -26,7 +26,6 @@ export async function getTopInteractedTags(params: GetTopInteractedTagsParams) {
 
 		return [
 			{ _id: '1', name: 'tag' },
-			{ _id: '2', name: 'tag2' },
 		]
 	} catch (error) {
 		console.log(error)
