@@ -1,8 +1,8 @@
-# DevOverflow App
+# Devflow
 
 ## Introduction
 
-The "DevOverflow" project is a web platform inspired by the popular Stack Overflow service, designed to facilitate users in sharing knowledge, asking questions, and obtaining answers on various topics related to programming and technology. DevOverflow offers users the ability to ask questions, provide answers, rate content, and build a community of experts in the IT field. 
+The "Devflow" project is a web platform inspired by the popular Stack Overflow service, designed to facilitate users in sharing knowledge, asking questions, and obtaining answers on various topics related to programming and technology. DevOverflow offers users the ability to ask questions, provide answers, rate content, and build a community of experts in the IT field. 
 
 You can try it out here: **[https://devflowapp.vercel.app](https://devflowapp.vercel.app)**
 
